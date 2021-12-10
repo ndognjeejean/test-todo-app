@@ -12,6 +12,12 @@ This README would normally document whatever steps are necessary to get your app
 - Version
 - [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
+### How do I quick [very speed] set up ?
+
+- go to docker folder and run it:
+
+> docker-compose up -d --build
+
 ### How do I get set up?
 
 - Summary of set up
