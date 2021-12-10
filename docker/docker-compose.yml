@@ -2,6 +2,7 @@ version: "3"
 
 services:
 
+  # Mysql Database service
   db:
     image: mysql:8.0.20
     container_name: mydb
@@ -14,6 +15,7 @@ services:
     ports:
      - "3306:3306"
 
+  # Springboot Application Service
   web:
     container_name: myapp
     build:
