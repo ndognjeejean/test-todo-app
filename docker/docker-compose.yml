@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+
+  # Mysql Database service
+  db:
+    image: mysql:8.0.20
+    container_name: mydb
+    restart: unless-stopped
+    environment:
+     #- MYSQL_USER=root
+     - MYSQL_ROOT_PASSWORD=11223Kong#
+     - MYSQL_PASSWORD=11223Kong#
+     - MYSQL_DATABASE=abyster_tests
+    ports:
+     - "3306:3306"
+
+  # Springboot Application Service
+  web:
+    container_name: myapp
+    build:
+     context: .
+    restart: unless-stopped
+    depends_on:
+     - db
+    ports:
+     - "5000:8087"
